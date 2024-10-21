@@ -1,12 +1,12 @@
 test("1 euro should be 1.07 dollars", function() {
     // Importo la funcion desde app.js
     const { fromEuroToDollar } = require('./app.js');
-    let inputValue = "a";
+    let inputValue = 1;
     if (typeof inputValue != "number") {
         throw new Error("Invalid input: Please enter a valid number. (In this example, it has to be 1)");
       }
 
-    const dollars = fromEuroToDollar(inputValue);
+    const dollars = fromEuroToDollar(1);
     const expected = 1.07;
 
     expect(dollars).toBe(expected);
